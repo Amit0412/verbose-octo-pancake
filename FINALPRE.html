@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function*op()
+        {
+            let i=0;
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        let a=op();
+        console.log(a.next())
+        console.log(a.next())
+        console.log(a.next())
+        console.log(a.next())
+
+        //MAP
+
+        let b=new Map()
+        const key1="mystr"
+        const key2={}
+        b.set(key1,"sample")
+        b.set(key2,"op")
+        console.log(b)
+        console.log(b.size)
+
+        for(let key of b.keys())
+        {
+            console.log(key)
+        }
+
+        //set
+
+        let c=new Set()
+        c.add(12)
+        c.add(34)
+        console.log(c)
+        console.log(c.has(34))
+
+        //DESTRUCTURING
+        let t,x;
+        [t,x]=[3,4]
+        console.log(t,x)
+        </script>
+</body>
+</html>
