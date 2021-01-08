@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="ou" onclick="sample()">CLICK</button>
     <script>
         function*op()
         {
@@ -42,11 +43,43 @@
         c.add(34)
         console.log(c)
         console.log(c.has(34))
-
+        console.log(typeof c)
         //DESTRUCTURING
         let t,x;
         [t,x]=[1,4]
         console.log(t,x)
+
+
+        var name=10
+        while(name<20)
+        {
+            if(name==14)
+            {
+                name++;
+                break;
+            }
+            console.log(name)
+            name++;
+        }
+        function sample()
+        {
+            document.getElementById("ou").addEventListener('click',function()
+            {
+                console.log("clecked")
+            })
+        }
+        function myop(name,number)
+        {
+            this.namz=name;
+            this.no=number;
+        }
+        let rc=new myop("amit",7001)
+        console.log(rc)
+
+        let df=/harry/
+        let rcc="this is the harry string"
+        console.log(df.exec(rcc))
+        console.log(df.test(rcc))
         </script>
 </body>
 </html>
